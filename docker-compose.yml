@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  rustapp:
+    image: rust:1.85
+    volumes:
+      - "./projects:/usr/src/projects"
+    tty: true
+    entrypoint: ["tail", "-f", "/dev/null"]
